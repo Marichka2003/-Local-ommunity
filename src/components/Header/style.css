@@ -1,0 +1,63 @@
+/* styles.css */
+
+.header-container {
+  background-color: white;
+  color: white;
+  padding: 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo-container {
+  position: relative;
+}
+
+.logo {
+  width: 35px; /* або ваш розмір логотипу */
+  height: auto; /* забезпечує збереження пропорцій */
+}
+
+.logo-text {
+  position: absolute;
+  top: 0; /* Розмістіть текст у верхній частині контейнера */
+  left: 3.2%; /* Позначаємо центр контейнера */
+  transform: translateX(-50%); /* Зміщення тексту на половину ширини назад */
+  font-family: 'Luminari', fantasy;
+  font-size: 24px;
+  font-weight: bold;
+  color: white;
+  margin-top: 40px;
+  /* Інші стилі за необхідності */
+}
+.logo-text2 {
+  position: absolute;
+  top: 0; /* Розмістіть текст у верхній частині контейнера */
+  left: 3.4%; /* Позначаємо центр контейнера */
+  transform: translateX(-50%); /* Зміщення тексту на половину ширини назад */
+  font-family: 'Luminari', fantasy;
+  font-size: 27px;
+  font-weight: bold;
+  color: Turquoise;
+  margin-top: 38px;
+  /* Інші стилі за необхідності */
+}
+
+.heading {
+  color: white;
+  text-decoration: none;
+}
+
+.navbar-container {
+  list-style: none;
+  display: flex;
+}
+
+.navbar-container li {
+  margin-right: 15px;
+}
+
+.navbar-container a {
+  color: Black;
+  text-decoration: none;
+}

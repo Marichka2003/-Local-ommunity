@@ -1,0 +1,43 @@
+.rectangle-with-bottom-curve {
+  width: 100%;
+  height: 500px;
+  background-color: DarkTurquoise;
+  border-bottom-left-radius: 40% 40%;
+  border-bottom-right-radius: 40% 40%;
+  position: relative;
+}
+
+.overlay-image {
+  position: absolute;
+  top: 25%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 100%; /* Adjust the width as needed */
+  height: 50%;
+  z-index: 1;
+  opacity: 0.5;
+}
+
+.text-caption {
+  position: absolute;
+  top: 0; /* Розмістіть текст у верхній частині контейнера */
+  left: 3.4%; /* Позначаємо центр контейнера */
+
+  font-family: 'Luminari', fantasy;
+  font-size: 24px;
+  font-weight: bold;
+  color: Chocolate;
+  margin-top: 300px;
+}
+.text-caption2 {
+  position: absolute;
+  top: 0; /* Розмістіть текст у верхній частині контейнера */
+  left: 3.4%; /* Позначаємо центр контейнера */
+
+  font-family: 'Luminari', fantasy;
+  font-size: 24px;
+  font-weight: bold;
+  color: white;
+  margin-top: 300px;
+  margin-left: 123px;
+}
