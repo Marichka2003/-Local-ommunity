@@ -1,0 +1,27 @@
+.search-container {
+  margin: 20px;
+}
+
+.search-input {
+  padding: 10px;
+  margin-right: 10px;
+}
+
+.search-button {
+  padding: 10px;
+  background-color: #4caf50; /* Зелений колір */
+  color: white;
+  cursor: pointer;
+}
+
+.search-results {
+  margin-top: 20px;
+}
+
+.search-result-item {
+  border: 1px solid #ddd;
+  padding: 10px;
+  margin-bottom: 10px;
+}
+
+/* Додайте інші стилі за потребою */

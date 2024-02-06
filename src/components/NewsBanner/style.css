@@ -1,0 +1,93 @@
+.news-banner-container {
+  justify-content: center;
+  display: flex;
+  right:0px;
+  min-width: 100px;
+  max-width: 900px;
+  width: 86%;
+  overflow: hidden;
+  margin-top: 20px;
+  margin-left: 80px;
+}
+
+.news-wrapper {
+  display: flex;
+  justify-content: center;
+}
+
+.news-square-left,
+.news-square-right {
+  width: 360px; /* Ширина квадратів */
+  height: 5px;
+  position: absolute;
+}
+
+.news-square-left {
+  top: -10px;
+  left: 55px; /* Змініть значення, щоб змінити положення лівого квадрата */
+  background-color: MediumTurquoise; /* Колір лівого квадрата */
+  width: 80px; /* Змініть значення, щоб змінити ширину лівого квадрата */
+  height: 20%;
+}
+
+.news-square-right {
+  top: 245px;
+  right: 395px; /* Змініть значення, щоб змінити положення правого квадрата */
+  background-color: PaleTurquoise; /* Колір правого квадрата */
+  width: 80px; /* Змініть значення, щоб змінити ширину правого квадрата */
+  height: 20%;
+}
+.news-content {
+  display: flex;
+  align-items: center;
+}
+
+.news-image {
+  position: relative;
+  top: 12px;
+  width: 400px;
+  height: 300px;
+  object-fit: cover;
+  z-index: 1;
+}
+
+.news-text h2{
+  text-align: justify;
+  font-family: 'Poppins', SemiBold 600 Italic;
+  font-size: 16px;
+  font-weight: bold;
+  color: #003366;
+  flex: 1;
+  padding-top: -10px;
+  padding-left: 10px; /* Відступи: вгору, праворуч, внизу, ліворуч */
+  z-index: 1;
+}
+.news-text p{
+  text-align: justify;
+  font-family: 'Poppins', SemiBold 600 Italic;
+  font-size: 16px;
+  color: #003366;
+  flex: 1;
+  padding-top: -10px;
+  padding-left: 10px; /* Відступи: вгору, праворуч, внизу, ліворуч */
+  z-index: 1;
+}
+
+.news-arrow {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 24px;
+  background-color: transparent;
+  border: none;
+  color: MediumTurquoise;
+  cursor: pointer;
+}
+
+.news-arrow.left {
+  left: 10px;
+}
+
+.news-arrow.right {
+  right: 10px;
+}

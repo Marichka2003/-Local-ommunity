@@ -1,0 +1,251 @@
+.square-container {
+    position: relative;
+    top: 0px;
+    width: 100%;
+    min-width: 100px;
+    max-width: 900px;
+    height: 480px;
+    background: LightCyan;
+}
+.square-container-white {
+    position: relative;
+    top: 20px;
+    width: 90%;
+    margin-left: 50px;
+    min-width: 100px;
+    max-width: 900px;
+    height: 420px;
+    background: white;
+    border-radius: 8px; /* Закруглені кути */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Тінь */
+}
+.square-container-appeal {
+  position: relative;
+  top: 60px;
+  width: 100%;
+  min-width: 100px;
+  max-width: 900px;
+  height: 550px;
+  background: LightCyan;
+}
+
+.square-white {
+  position: relative;
+  top: 60px;
+  left: 3%;
+  width: 100%;
+  min-width: 100px;
+  max-width: 400px;
+  height: 400px;
+  background: white;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4);
+}
+.image {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 100%;
+  min-width: 97px;
+  max-width: 350px;
+  height: 357px;
+  border-radius: 10px; /* Заокруглені кути */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4); /* Тінь */
+}
+.square-container p {
+    position: relative;
+    margin-top: 0px;
+    font-size: 14px;
+    text-align: justify;
+    padding-left: 20px;
+    padding-right: 20px;
+    font-family: 'Poppins', SemiBold 600 Italic;
+    color: #003366;
+    box-sizing: border-box; /* Додано властивість box-sizing */
+    word-wrap: break-word; /* Додано властивість word-wrap */
+}
+.square-container h2 {
+    position: relative;
+    margin-top: 15px;
+    font-size: 16px;
+    text-align: justify;
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-top: 20px;
+    font-family: 'Poppins', SemiBold 600 Italic;
+    color: #003366;
+    box-sizing: border-box; /* Додано властивість box-sizing */
+    word-wrap: break-word; /* Додано властивість word-wrap */
+}
+
+.square-text-appeal{
+    position: relative;
+    top: -356px;
+    left: 52%;
+    width: 100%;
+    min-width: 100px;
+    max-width: 400px;
+    height: 400px;
+    background: white;
+    border-radius: 10px; /* Заокруглені кути */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4); /* Тінь */
+}
+
+.text-header-appeal{
+    padding-top: 20px;
+    font-size: 14px;
+    padding-left: 195px;
+    font-family: 'Poppins', SemiBold 600 Italic;
+    color: #003366;
+}
+
+.text-appeal{
+    font-size: 14px;
+    padding-left: 10px;
+    font-family: 'Poppins', SemiBold 600 Italic;
+    color: #003366;
+}
+
+.type-centre{
+   text-align: center;
+   font-size: 14px;
+   font-family: 'Poppins', SemiBold 600 Italic;
+   color: #003366;
+}
+
+.appeal-footer{
+    padding-top: 20px;
+    font-size: 14px;
+    padding-left: 10px;
+    font-family: 'Poppins', SemiBold 600 Italic;
+    color: #003366;
+}
+.appeal-footer-left{
+    padding-top: 0px;
+    font-size: 14px;
+    padding-left: 250px;
+    font-family: 'Poppins', SemiBold 600 Italic;
+    color: #003366;
+}
+
+.modal {
+  display: none;
+  position: fixed;
+  top: 0%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  padding: 0px;
+  background-color: white;
+  border: 1px solid #ddd;
+  z-index: 1;
+}
+
+.modal-overlay {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+}
+
+.modal-content {
+  background: white;
+  padding: 20px;
+  border-radius: 5px;
+  z-index: 1;
+  width: 500px; /* Змініть це значення на те, яке вам підходить */
+  height: 530px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.6); /* Тінь */
+  background: LightCyan;
+}
+
+form label {
+  display: block;
+  margin-bottom: 10px;
+  padding-right: 25px;
+}
+
+form input[type="text"],
+form select,
+form textarea {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 10px;
+  border: 1px ;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4); /* Тінь */
+  border-radius: 4px;
+  font-family: 'Poppins', SemiBold 600 Italic;
+}
+
+form select {
+  width: calc(100% - 22px);
+}
+
+form button {
+  background-color: DarkTurquoise;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  margin-right: 10px;
+}
+
+form button:hover {
+  background-color: #45a049;
+}
+
+form button[type="button"] {
+  background-color: #e74c3c;
+}
+.open-modal-btn {
+  padding: 10px 20px;
+  font-size: 16px;
+  margin-top: 150px;
+  margin-left: 230px;
+  text-align: center;
+  text-decoration: none;
+  background-color: DarkTurquoise;
+  font-family: 'Poppins', SemiBold 600 Italic;
+  color: white;
+  border-radius: 25px;
+  cursor: pointer;
+  position: relative;
+  border: none;
+  top: -30px; /* Зсунути вверх */
+  left: -660px;  /* Зсунути вліво */
+}
+
+.close-modal-btn {
+  background: #e74c3c;
+  color: white;
+  padding: 10px 20px;
+  font-size: 16px;
+  border: none;
+  cursor: pointer;
+}
+.see-all-btn{
+  font-size: 16px;
+  text-decoration: none;
+  font-family: 'Poppins', SemiBold 600 Italic;
+  color: DarkTurquoise;
+  font-weight: bold;
+  position: relative;
+  top: -60px; /* Зсунути вверх */
+  left: 320px;  /* Зсунути вліво */
+}
+
+.footer-app{
+  margin-top: 90px;
+  background-color: white;
+  width: 90%;
+  margin-left: 0px;
+  min-width: 399px;
+  max-width: 900px;
+  margin-bottom: -40px;
+}

@@ -1,0 +1,52 @@
+.footer {
+  background-color: #252641; /* Темний колір футера */
+  color: white; /* Колір тексту у футері */
+  padding: 10px; /* Відступи всередині футера */
+  text-align: center; /* Вирівнювання тексту у центрі */
+  height: 127px;
+  width: 98%;
+}
+
+.icon {
+  justify-content: center;
+  align-items: center;
+  width: 6%; /* Займати 100% ширини батьківського контейнера */
+  max-height: 3vh; /* Займати 100% висоти вікна перегляду */
+}
+.icon img {
+  max-width: 10%; /* Забороняє зображенню перевищувати свою власну ширину */
+  height: auto; /* Забезпечує збереження пропорцій розмірів при зменшенні ширини */
+}
+.footer-text p{
+  color: silver;
+  font-family: 'Poppins', SemiBold 600 Italic;
+  font-size: 10px;
+}
+
+.subscription-input {
+  padding: 4px;
+  border: 1px solid #ccc;
+  border-radius: 20px; /* Закруглені кути */
+  font-family: 'Poppins', SemiBold 600 Italic;
+  font-size: 12px;
+  color: white;
+  width: 180px; /* Задайте ширину за потребою */
+  background-color: #252641;
+
+}
+
+.subscription-input::placeholder {
+  color: #aaa;
+}
+
+.subscription-button{
+  padding: 4px;
+  border: 1px solid #ccc;
+  font-family: 'Poppins', SemiBold 600 Italic;
+  border-radius: 20px; /* Закруглені кути */
+  font-size: 12px;
+  width: 120px; /* Задайте ширину за потребою */
+  color: #aaa;
+  background-color: #252641;
+  margin-left: 15px;
+}

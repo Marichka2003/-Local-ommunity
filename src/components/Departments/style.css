@@ -1,0 +1,103 @@
+.content-container {
+  margin: 40px 400px;
+  background-color: white;
+}
+
+.square {
+  width: 100%;
+  min-width: 100px;
+  max-width: 900px;
+  height: 570px;
+  background: LightCyan;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.header-text {
+  width: 100%; /* Змінено ширину тексту на 100% */
+  text-align: justify;
+  padding-left: 10px;
+  font-weight: bold;
+  color: #003366;
+  margin-bottom: 10px; /* Додано відступ знизу */
+}
+
+.square ul, .square li {
+    text-align: justify;
+    list-style-position: inside;
+    color: #003366;
+    font-size: 16px;
+}
+
+.square-container-dep {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  margin-top: 20px;
+  background-color: white;
+  width: 100%;
+  min-width: 600px;
+  max-width: 900px;
+}
+
+
+.type-block {
+  margin-top: 20px;
+  padding: 10px;
+  background-color: white;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  width: 48%;
+  flex-basis: 48%; /* Додано це */
+  box-sizing: border-box;
+  margin-bottom: 20px;
+}
+
+
+.type-block p {
+  font-size: 14px;
+  color: #003366;
+  text-align: justify;
+}
+.type-block h2 {
+  font-size: 16px;
+  font-weight: bold;
+  color: #003366;
+  text-align: center;
+}
+
+.image-dep {
+    width: 50px;
+    height: 50px;
+    margin-left: 175px;
+}
+
+.image-head {
+  width: 30%;
+  height: auto;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4);
+  margin-bottom: 10px;
+  margin-right: 5%; /* Змінено фіксований відступ на відсоток або іншу одиницю */
+  margin-left: 5%; /* Додано відступ зліва */
+}
+
+
+.square-space {
+  background-color: white;
+  width: 100%;
+  min-width: 600px;
+  max-width: 6000px;
+}
+
+.footer-dep{
+  background-color: white;
+  width: 90%;
+  margin-left: 0px;
+  min-width: 399px;
+  max-width: 900px;
+  margin-bottom: -40px;
+}
+
+
