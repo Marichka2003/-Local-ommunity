@@ -1,9 +1,25 @@
-// Header.js
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import './style.css';
 import { Link } from 'react-router-dom';
+import axios from 'axios';
+import LanguageSelector from '../LanguageSelector/LanguageSelector';
+import { useTranslation } from 'react-i18next';
 
-const Header = ({ isLoggedIn, handleLogout }) => {
+const Header = ({ isLoggedIn, handleLogout, userId }) => {
+  const [userName] = useState('');
+  const [userData, setUserData] = useState('');
+  const { t } = useTranslation();
+
+  useEffect(() => {
+    axios.get('https://localhost:44369/api/User/1')
+      .then(response => {
+        setUserData(response.data);
+      })
+      .catch(error => {
+        console.error('Error fetching user data:', error);
+      });
+  }, []);
+  console.log("Username in state:", userName);
   return (
     <div className='header-container' >
       <h1>
@@ -13,16 +29,22 @@ const Header = ({ isLoggedIn, handleLogout }) => {
           <span className="logo-text">ChUTC</span>
         </a>
       </h1>
-      <ul className='navbar-container'>
-        <li><Link to='/Appeal'>Appeal</Link></li>
-        <li><Link to='/Departments'>Departments</Link></li>
-        <li><Link to='/Map'>Map</Link></li>
-        <li><Link to='/Infrastructure'>Infrastructure</Link></li>
-        {!isLoggedIn && <li><Link to='/Authorization' className="auth-link">Authorization</Link></li>}
-        {!isLoggedIn && <li><Link to='/SignUp' className="signup-link">SignUp</Link></li>}
-        <li><Link to='/Search'>Search</Link></li>
-        {isLoggedIn && <li><button className="logout-button" onClick={handleLogout}>Logout</button></li>}
-      </ul>
+          <ul className='navbar-container'>
+            <li><Link to='/Appeal'>{t('Appeal')}</Link></li>
+            <li><Link to='/Departments'>{t('Departments')}</Link></li>
+            <li><Link to='/Map'>{t('Map')}</Link></li>
+            <li><Link to='/Infrastructure'>{t('Infrastructure')}</Link></li>
+            <li><Link to='/Search'>{t('Search')}</Link></li>
+            <li><LanguageSelector /></li>
+            {!isLoggedIn && <li><Link to='/Authorization' className="auth-link">{t('Authorization')}</Link></li>}
+            {!isLoggedIn && <li><Link to='/SignUp' className="signup-link">{t('SignUp')}</Link></li>}
+            {isLoggedIn && <li><button className="logout-button" onClick={handleLogout}>{t('Logout')}</button></li>}
+            {isLoggedIn && (
+              <li>
+               <Link to='/User' className="circular-link">{userData.userName ? userData.userName.charAt(0) : 'U'}</Link>
+              </li>
+            )}
+          </ul>
     </div>
   );
 };

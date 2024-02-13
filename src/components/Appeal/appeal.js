@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom';
 import Footer from '../Footer/footer';
 import './style.css';
 import axios from 'axios';
+import { useTranslation } from 'react-i18next';
 
 const Appeal = () => {
   const [data, setData] = useState([]);
@@ -71,7 +72,7 @@ const appealTypes = ['Appeal', 'Complaints', 'Statements', 'Proposal'];
   const toggleForm = () => {
     setShowForm(!showForm);
   };
-
+  const { t } = useTranslation();
   console.log('Rendering Appeal component');
 
   return (
@@ -80,28 +81,13 @@ const appealTypes = ['Appeal', 'Complaints', 'Statements', 'Proposal'];
         <div className="square-container">
             <div className="square-container-white">
               <h2>
-                Here you can leave a statement, suggestions, complaints, and appeals. To leave a complaint, log in
-                to your account, upload a photo if necessary, and describe the problem in detail<br/>
+                {t('Here you can leave a statement, suggestions, complaints, and appeals. To leave a complaint, log in to your account, upload a photo if necessary, and describe the problem in detail')}<br/>
               </h2>
               <p>
-                <br/>1. A citizens complaint  is one of the types of citizens appeals with a demand for restoration
-                 of rights and protection of the legitimate interests of citizens violated by actions (inaction), decisions
-                 of state bodies, local self-government bodies, enterprises, institutions, organizations, associations of
-                 citizens, officials.<br/>
-
-                 <br/>2. An application is a document in which a private or official person makes a request with a specific
-                 proposal to the institution or official.<br/>
-
-                 <br/>3. Appeal provides citizens with the opportunity to defend their rights and legitimate interests
-                 and to restore them in case of violation, to participate in the management of state and public affairs
-                 and to influence the improvement of the work of state and local self-government bodies, institutions,
-                 enterprises, and organizations.<br/>
-
-                 <br/>4. Proposal (remarks) - citizens appeals, where advice and recommendations are expressed regarding the
-                 activities of state authorities and local self-government bodies, deputies of all levels, officials,
-                 as well as opinions are expressed regarding the regulation of social relations and living conditions
-                 of citizens, improvement of the legal basis of state and public life, socio-cultural and other spheres
-                 of activity of the state and society.
+                <br/>1. {t('A citizens complaint  is one of the types of citizens appeals with a demand for restoration of rights and protection of the legitimate interests of citizens violated by actions (inaction), decisions of state bodies, local self-government bodies, enterprises, institutions, organizations, associations of citizens, officials.')}<br/>
+                <br/>2. {t('An application is a document in which a private or official person makes a request with a specific proposal to the institution or official.')}<br/>
+                <br/>3. {t('Appeal provides citizens with the opportunity to defend their rights and legitimate interests and to restore them in case of violation, to participate in the management of state and public affairs and to influence the improvement of the work of state and local self-government bodies, institutions, enterprises, and organizations.')}<br/>
+                <br/>4. {t('Proposal (remarks) - citizens appeals, where advice and recommendations are expressed regarding the activities of state authorities and local self-government bodies, deputies of all levels, officials, as well as opinions are expressed regarding the regulation of social relations and living conditions of citizens, improvement of the legal basis of state and public life, socio-cultural and other spheres of activity of the state and society.')}
               </p>
             </div>
         </div>
@@ -117,21 +103,21 @@ const appealTypes = ['Appeal', 'Complaints', 'Statements', 'Proposal'];
           <div className="square-text-appeal">
               {data.length > 0 && (
                 <div key={data[data.length - 1].id}>
-                  <p className="text-header-appeal">Heads of the Chornoostrivska <br /> settlement council <br />
-                    Dzysya Mykhailo Semenovych <br />
-                    legal person<br />
-                    {data[data.length - 1].fullName}
+                  <p className="text-header-appeal">{t('Heads of the Chornoostrivska')} <br /> {t('settlement council')} <br />
+                    {t('Dzysya Mykhailo Semenovych')} <br />
+                    {t('legal person')}<br />
+                    {t(data[data.length - 1].fullName)}
                   </p>
-                  <p className="type-centre">{appealTypes[data[data.length - 1].type]}</p>
-                  <p className="text-appeal"> I {data[data.length - 1].fullName} living in {data[data.length - 1].adress} and will ask about {data[data.length - 1].description}
+                  <p className="type-centre">{t(appealTypes[data[data.length - 1].type])}</p>
+                  <p className="text-appeal"> {t('I')} {t(data[data.length - 1].fullName)} {t('living in')} {data[data.length - 1].adress} {t('and will ask about')} {data[data.length - 1].description}
                   </p>
-                  <p className="appeal-footer">Phone Number: 0{data[data.length - 1].phoneNumber} <br /></p>
-                  <p className="appeal-footer-left">Signature: M.Svee</p>
+                  <p className="appeal-footer">{t('Phone Number')}: 0{data[data.length - 1].phoneNumber} <br /></p>
+                  <p className="appeal-footer-left">{t('Signature')}: M.Svee</p>
                 </div>
               )}
             <div>
-              <button onClick={toggleForm} className="open-modal-btn">Add another one</button>
-              <Link to="/AppealAll" className="see-all-btn">See all</Link>
+              <button onClick={toggleForm} className="open-modal-btn">{t('Add another one')}</button>
+              <Link to="/AppealAll" className="see-all-btn">{t('See all')}</Link>
               {showForm && (
                 <div className="modal-overlay">
                   <div className="modal-content">

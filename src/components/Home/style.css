@@ -17,6 +17,7 @@
   border-bottom-left-radius: 40% 40%;
   border-bottom-right-radius: 40% 40%;
   position: relative;
+  top: -10px;
 }
 
 .overlay-image {

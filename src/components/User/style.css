@@ -1,0 +1,7 @@
+.user-container {
+  width: 50%;
+  margin: 50px auto 0; /* Центруємо контент по горизонталі та додаємо 50px відступу зверху */
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}

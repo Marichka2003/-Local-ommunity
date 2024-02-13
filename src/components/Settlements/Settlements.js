@@ -2,10 +2,11 @@ import React, { useEffect, useState } from "react";
 import Footer from '../Footer/footer';
 import './style.css';
 import axios from 'axios';
-
+import { useTranslation } from 'react-i18next';
 
 const Settlements = () => {
 const [data, setData] = useState([]);
+const { t } = useTranslation();
 
     useEffect(() => {
         fetchData();
@@ -29,7 +30,7 @@ const [data, setData] = useState([]);
                     {data.map(item => (
                         <div key={item.id} className="square-white-settlements">
                             <img src={item.imageName} alt={item.name} />
-                            <p>{item.name}<br/>{item.description}</p>
+                            <p>{t(item.name)}<br/>{t(item.description)}</p>
                         </div>
                     ))}
                 </div>

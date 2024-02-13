@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import './style.css';
+import { useTranslation } from 'react-i18next';
 
 const newsData = [
   {
@@ -21,7 +22,6 @@ const newsData = [
     imageUrl: '/news.jpg',
   },
 ];
-
 const NewsBanner = () => {
   const [currentNewsIndex, setCurrentNewsIndex] = useState(0);
 
@@ -42,7 +42,7 @@ const NewsBanner = () => {
   };
 
   const { title, text, imageUrl } = newsData[currentNewsIndex];
-
+  const { t } = useTranslation();
   return (
     <div className="news-banner-container">
       <div className="news-wrapper">
@@ -50,8 +50,8 @@ const NewsBanner = () => {
         <img src={imageUrl} alt={title} className="news-image" />
         <div className="news-content">
           <div className="news-text">
-            <h2>{title}</h2>
-            <p>{text}</p>
+            <h2>{t(title)}</h2>
+            <p>{t(text)}</p>
           </div>
         </div>
         <div className="news-square-right"></div>
