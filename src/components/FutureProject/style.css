@@ -1,0 +1,121 @@
+.future-program-banner-container{
+  justify-content: center;
+  display: flex;
+  right:0px;
+  min-width: 100px;
+  max-width: 2000px;
+  width: 86%;
+  overflow: hidden;
+  margin-top: 20px;
+  margin-left: 80px;
+}
+
+.future-program-wrapper {
+  display: flex;
+  justify-content: center;
+}
+.future-program-square-left {
+  width: 360px;
+  height: 5px;
+  position: absolute;
+}
+.future-program-square-left {
+  top: -10px;
+  left: 55px;
+  background-color: MediumTurquoise;
+  width: 80px;
+  height: 20%;
+}
+.future-program-content {
+  display: flex;
+  align-items: center;
+}
+.future-program-image {
+  position: relative;
+  top: 12px;
+  width: 400px;
+  height: 300px;
+  object-fit: cover;
+  z-index: 1;
+}
+.future-program-text h2{
+  text-align: justify;
+  font-family: 'Poppins', SemiBold 600 Italic;
+  font-size: 16px;
+  font-weight: bold;
+  color: #003366;
+  flex: 1;
+  padding-top: -10px;
+  padding-left: 10px;
+  z-index: 1;
+}
+.future-program-text p{
+  text-align: justify;
+  font-family: 'Poppins', SemiBold 600 Italic;
+  font-size: 16px;
+  color: #003366;
+  flex: 1;
+  padding-top: -10px;
+  padding-left: 10px;
+  z-index: 1;
+}
+.vote-section p{
+  text-align: justify;
+  font-family: 'Poppins', SemiBold 600 Italic;
+  font-size: 16px;
+  color: #003366;
+  z-index: 1;
+}
+.future-votes{
+  text-align: justify;
+  font-family: 'Poppins', SemiBold 600 Italic;
+  font-size: 16px;
+  color: #003366;
+  z-index: 1;
+  padding: 10px;
+}
+.future-program-arrow {
+  position: absolute;
+  top: 40%;
+  transform: translateY(-50%);
+  font-size: 40px;
+  background-color: transparent;
+  border: none;
+  color: MediumTurquoise;
+  cursor: pointer;
+  opacity: 0.5;
+  font-weight: bold;
+  transition: color 0.3s ease;
+}
+.future-program-arrow:hover {
+  color: #008080;
+}
+
+.future-program-arrow.left {
+  left: 10px;
+}
+
+.future-program-arrow.right {
+  right: 10px;
+}
+.vote-button {
+  background-color: MediumTurquoise;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-top: 10px;
+}
+
+.already-voted-message {
+  color: red;
+  margin-top: 10px;
+}
+.vote-section {
+  display: flex;
+  align-items: center;
+}
+.vote-button {
+  margin-left: 40px;
+}

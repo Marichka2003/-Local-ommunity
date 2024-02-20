@@ -1,0 +1,256 @@
+.content-container {
+  margin: 0 5%;
+  background-color: white;
+}
+
+.fixed-size-block {
+  width: 10rem;
+  height: 10rem;
+}
+
+.rectangle-with-bottom-curve {
+  width: 100%;
+  max-width: 900px;
+  margin: 0 auto;
+  height: 350px;
+  background-color: MediumTurquoise;
+  border-bottom-left-radius: 40% 40%;
+  border-bottom-right-radius: 40% 40%;
+  position: relative;
+  top: -10px;
+}
+
+.overlay-image {
+  position: absolute;
+  top: 25%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 100%;
+  height: 70%;
+  z-index: 1;
+  opacity: 0.5;
+}
+
+.text-caption {
+  position: absolute;
+  top: 0;
+  left: 4%;
+  font-family: 'Poppins', SemiBold 600 Italic;
+  font-size: 24px;
+  font-weight: bold;
+  color: Chocolate;
+  margin-top: 220px;
+}
+.text-caption2 {
+  position: absolute;
+  top: 0;
+  left: 5.5%;
+  font-family: 'Poppins', SemiBold 600 Italic;
+  font-size: 24px;
+  color: white;
+  margin-top: 220px;
+  margin-left: 123px;
+}
+.text-caption3 {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  font-family: 'Poppins', SemiBold 600 Italic;
+  font-size: 14px;
+  color: LightCyan;
+  margin-top: 227px;
+  margin-left: 70px;
+}
+.text-caption4 {
+  position: absolute;
+  top: 0;
+  left: 43%;
+  font-family: 'Poppins', SemiBold 600 Italic;
+  font-size: 14px;
+  color: #003366;
+  margin-top: 280px;
+  margin-left: 70px;
+}
+.oval-button {
+  display: inline-block;
+  padding: 10px 20px;
+  font-size: 14px;
+  margin-top: 270px;
+  margin-left: 280px;
+  text-align: center;
+  text-decoration: none;
+  font-family: 'Poppins', SemiBold 600 Italic;
+  background-color: PaleTurquoise;
+  color: #003366;
+  border-radius: 25px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.oval-button:hover {
+  background-color: LightCyan;
+}
+
+.circle-with-triangle {
+  position: relative;
+  margin-left: 400px;
+  top: -54px;
+  width: 38px;
+  height: 38px;
+  background-color: white;
+  border-radius: 50%;
+}
+
+.circle-with-triangle::before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 60%;
+  width: 0;
+  height: 0;
+  border-style: solid;
+}
+
+.circle-with-triangle::before {
+  border-width: 8px;
+  border-color: transparent transparent transparent DarkSlateGray;
+  transform: translate(-50%, -50%) rotate(0deg);
+}
+.circle-with-triangle:hover::before {
+  border-color: transparent transparent transparent LightSlateGray; /* Змініть колір трикутника при наведенні */
+}
+
+.square-container-banner-news {
+  position: relative;
+  top: 10px;
+  width: 100%;
+  min-width: 100px;
+  max-width: 900px;
+  height: 400px;
+  margin-bottom: 40px;
+}
+.square-container-banner {
+  position: relative;
+  top: -60px;
+  width: 100%;
+  min-width: 100px;
+  max-width: 900px;
+  height: 400px;
+  margin-bottom: 40px;
+}
+.square-container-home {
+  position: relative;
+  top: 0px;
+  width: 100%;
+  min-width: 33px;
+  max-width: 900px;
+  background: LightCyan;
+  margin-bottom: 40px;
+  margin-top: 100px;
+  padding-top: 60px;
+  height: auto;
+}
+
+.footer-class {
+  position: relative;
+  margin-top: 60px;
+  background-color: white;
+}
+
+.container-map {
+  display: flex;
+  justify-content: space-around;
+  padding-top: 0px;
+  padding-bottom: 50px;
+}
+
+.square-white-homeMap {
+  position: relative;
+  top: -60px;
+  left: 0%;
+  width: 100%;
+  min-width: 100px;
+  max-width: 400px;
+  height: 300px;
+  background: white;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4);
+  margin: 10px;
+  padding: 10px;
+}
+
+.square-white-homeMap p {
+  margin-top: -17px;
+  margin-bottom: 3px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 5;
+  -webkit-box-orient: vertical;
+  font-family: 'Poppins', SemiBold 600 Italic;
+  font-size: 14px;
+  color: #003366;
+}
+.square-white-homeMap h2 {
+  margin-top: 7px;
+  margin-bottom: 20px;
+  font-family: 'Poppins', SemiBold 600 Italic;
+  font-size: 16px;
+  color: #003366;
+}
+.square-container-home h2{
+  margin-top: -20px;
+  margin-left: 20px;
+  margin-bottom: 5px;
+  font-size: 16px;
+  color: Chocolate;
+  font-family: 'Poppins', SemiBold 600 Italic;
+}
+
+.square-container-home p, ul, ol{
+  margin-top: 7px;
+  margin-left: 20px;
+  margin-right: 20px;
+  text-align: justify;
+  font-size: 14px;
+  font-family: 'Poppins', SemiBold 600 Italic;
+  color: #003366;
+}
+.square-white-homeMap button {
+  margin-left: 40px;
+  margin-top: 15px;
+  color: #ffffff;
+  border: none;
+  padding: 8px;
+  cursor: pointer;
+  font-size: 14px;
+  font-family: 'Poppins', SemiBold 600 Italic;
+  background-color: DarkTurquoise;
+  border-radius: 25px;
+  transition: background-color 0.3s ease;
+}
+.square-white-homeMap button:hover {
+  background-color: #008080;
+}
+.square-white-homeMap img {
+  width: 167px;
+  height: 100px;
+  max-width: 100%;
+  display: block;
+  margin: 5px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4);
+}
+
+.pdf-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Задайте стилі для вбудованого об'єкта PDF (потрібні стилі можна додати відповідно до вашого дизайну) */
+.pdf-container embed {
+  border: 1px solid #ccc; /* Приклад рамки для вбудованого об'єкта */
+  margin-bottom: 20px;
+}
+

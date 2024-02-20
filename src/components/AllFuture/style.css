@@ -1,0 +1,41 @@
+.square-white-future {
+  background-color: white;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  margin-bottom: 20px;
+  height: 500px;
+  display: flex;
+  flex-direction: column;
+}
+.square-white-future p{
+  margin-top: 10;
+  font-family: 'Poppins', SemiBold 600 Italic;
+  font-size: 14px;
+  color: #003366;
+  text-align: justify;
+  margin-bottom: 10px;
+}
+.square-white-future h2{
+  margin-top: 0;
+  font-family: 'Poppins', SemiBold 600 Italic;
+  font-size: 16px;
+  color: #003366;
+  text-align: center;
+}
+.voted{
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+}
+.square-white-future img {
+  width: 400px;
+  height: auto;
+  margin-right: 90px;
+}
+.vote-buttom-enter{
+  display: flex;
+  margin-top: 90px;
+  margin-left: -150px;
+}
+
