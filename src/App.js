@@ -7,6 +7,8 @@ import Infrastructure from './components/Infrastructure/infrastructure';
 import Map from './components/Map/map';
 import Departments from './components/Departments/departments';
 import AppealAll from './components/AppealAll/appealall';
+import AllNews from './components/AllNews/AllNews';
+import AllFuture from './components/AllFuture/AllFuture';
 import Footer from './components/Footer/footer';
 import Settlements from './components/Settlements/Settlements';
 import Authorization from './components/Authorization/authorization';
@@ -63,6 +65,8 @@ function App() {
             <Route path="/Search" element={<Search isLoggedIn={isLoggedIn} />} />
             <Route path="/User" element={<User isLoggedIn={isLoggedIn} />} />
             <Route path="/i18n" element={<i18n isLoggedIn={isLoggedIn} />} />
+            <Route path="/AllNews" element={<AllNews isLoggedIn={isLoggedIn} />} />
+            <Route path="/AllFuture" element={<AllFuture isLoggedIn={isLoggedIn} />} />
             <Route path="/logout" element={<Navigate to="/" />} />
           </Routes>
         </Router>

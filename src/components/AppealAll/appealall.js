@@ -3,11 +3,12 @@ import { Link } from 'react-router-dom';
 import Footer from '../Footer/footer';
 import './style.css';
 import axios from 'axios';
+import { useTranslation } from 'react-i18next';
 
 const AppealAll = () => {
   const [data, setData] = useState([]);
   const appealTypes = ['Appeal', 'Complaints', 'Statements', 'Proposal'];
-
+  const { t } = useTranslation();
   useEffect(() => {
     fetchData();
   }, []);
@@ -34,16 +35,16 @@ const AppealAll = () => {
         <div className="columns-container">
           {data.map(item => (
             <div key={item.id} className="square-white-all">
-              <p className="text-header-appeal">Heads of the Chornoostrivska <br /> settlement council <br />
-                Dzysya Mykhailo Semenovych <br />
-                legal person<br />
-                {item.fullName}
+              <p className="text-header-appeal">{t('Heads of the Chornoostrivska')} <br /> {t('settlement council')} <br />
+                {t('Dzysya Mykhailo Semenovych')} <br />
+                {t('legal person')}<br />
+                {t(item.fullName)}
               </p>
-              <p className="type-centre">{appealTypes[item.type]}</p>
-              <p className="text-appeal"> I {item.fullName} living in {item.adress} and will ask about {item.description}
+              <p className="type-centre">{t(appealTypes[item.type])}</p>
+              <p className="text-appeal"> {t('I')} {t(item.fullName)} {t('living in')} {t(item.adress)} {t('and will ask about')} {t(item.description)}
               </p>
-              <p className="appeal-footer">Phone Number: 0{item.phoneNumber} <br /></p>
-              <p className="appeal-footer-left">Signature: M.Svee</p>
+              <p className="appeal-footer">{t('Phone Number')}: 0{item.phoneNumber} <br /></p>
+              <p className="appeal-footer-left">{t('Signature')}: M.Svee</p>
             </div>
           ))}
         </div>

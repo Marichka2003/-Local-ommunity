@@ -36,8 +36,7 @@ const Header = ({ isLoggedIn, handleLogout, userId }) => {
             <li><Link to='/Infrastructure'>{t('Infrastructure')}</Link></li>
             <li><Link to='/Search'>{t('Search')}</Link></li>
             <li><LanguageSelector /></li>
-            {!isLoggedIn && <li><Link to='/Authorization' className="auth-link">{t('Authorization')}</Link></li>}
-            {!isLoggedIn && <li><Link to='/SignUp' className="signup-link">{t('SignUp')}</Link></li>}
+            {!isLoggedIn && <li><Link to='/Authorization' className="auth-link">{t('Log in')}</Link></li>}
             {isLoggedIn && <li><button className="logout-button" onClick={handleLogout}>{t('Logout')}</button></li>}
             {isLoggedIn && (
               <li>

@@ -116,8 +116,11 @@
   border-color: transparent transparent transparent DarkSlateGray;
   transform: translate(-50%, -50%) rotate(0deg);
 }
+.circle-with-triangle:hover::before {
+  border-color: transparent transparent transparent LightSlateGray; /* Змініть колір трикутника при наведенні */
+}
 
-.square-container-banner {
+.square-container-banner-news {
   position: relative;
   top: 10px;
   width: 100%;
@@ -126,7 +129,15 @@
   height: 400px;
   margin-bottom: 40px;
 }
-
+.square-container-banner {
+  position: relative;
+  top: -60px;
+  width: 100%;
+  min-width: 100px;
+  max-width: 900px;
+  height: 400px;
+  margin-bottom: 40px;
+}
 .square-container-home {
   position: relative;
   top: 0px;
@@ -135,8 +146,9 @@
   max-width: 900px;
   background: LightCyan;
   margin-bottom: 40px;
-  padding-top: 60px; /* Доданий відступ зверху */
-  height: auto; /* Автоматично адаптувати висоту до вмісту */
+  margin-top: 100px;
+  padding-top: 60px;
+  height: auto;
 }
 
 .footer-class {
@@ -147,8 +159,9 @@
 
 .container-map {
   display: flex;
-  justify-content: space-around; /* Рівномірний розподіл елементів */
-  padding: 5px; /* Внутрішній відступ контейнера */
+  justify-content: space-around;
+  padding-top: 0px;
+  padding-bottom: 50px;
 }
 
 .square-white-homeMap {
@@ -163,16 +176,16 @@
   border-radius: 10px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4);
   margin: 10px;
-  padding: 10px; /* Відступи всередині блоку */
+  padding: 10px;
 }
 
 .square-white-homeMap p {
   margin-top: -17px;
-  margin-bottom: 3px; /* Відступ знизу для тексту */
+  margin-bottom: 3px;
   overflow: hidden;
   text-overflow: ellipsis;
   display: -webkit-box;
-  -webkit-line-clamp: 5; /* Відображає тільки 5 рядків тексту */
+  -webkit-line-clamp: 5;
   -webkit-box-orient: vertical;
   font-family: 'Poppins', SemiBold 600 Italic;
   font-size: 14px;
@@ -180,7 +193,7 @@
 }
 .square-white-homeMap h2 {
   margin-top: 7px;
-  margin-bottom: 20px; /* Відступ знизу для тексту */
+  margin-bottom: 20px;
   font-family: 'Poppins', SemiBold 600 Italic;
   font-size: 16px;
   color: #003366;
@@ -188,7 +201,7 @@
 .square-container-home h2{
   margin-top: -20px;
   margin-left: 20px;
-  margin-bottom: 5px; /* Відступ знизу для тексту */
+  margin-bottom: 5px;
   font-size: 16px;
   color: Chocolate;
   font-family: 'Poppins', SemiBold 600 Italic;
@@ -205,7 +218,7 @@
 }
 .square-white-homeMap button {
   margin-left: 40px;
-  margin-top: 15px; /* Відступ зверху для кнопки */
+  margin-top: 15px;
   color: #ffffff;
   border: none;
   padding: 8px;
@@ -214,13 +227,16 @@
   font-family: 'Poppins', SemiBold 600 Italic;
   background-color: DarkTurquoise;
   border-radius: 25px;
+  transition: background-color 0.3s ease;
 }
-
+.square-white-homeMap button:hover {
+  background-color: #008080;
+}
 .square-white-homeMap img {
-  width: 167px; /* Заповніть всю ширину батьківського контейнера */
-  height: 100px; /* Автоматично обчислює висоту для збереження пропорцій */
-  max-width: 100%; /* Не перевищує розмір оригінального зображення */
-  display: block; /* Запобігає виникненню непотрібних відступів зверху та знизу */
+  width: 167px;
+  height: 100px;
+  max-width: 100%;
+  display: block;
   margin: 5px;
   border-radius: 10px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4);

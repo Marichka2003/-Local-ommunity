@@ -197,7 +197,7 @@ form button {
 }
 
 form button:hover {
-  background-color: #45a049;
+  background-color: #008080;
 }
 
 form button[type="button"] {
@@ -219,8 +219,11 @@ form button[type="button"] {
   border: none;
   top: -30px; /* Зсунути вверх */
   left: -660px;  /* Зсунути вліво */
+  transition: background-color 0.3s ease;
 }
-
+.open-modal-btn:hover{
+    background-color: #008080;
+}
 .close-modal-btn {
   background: #e74c3c;
   color: white;

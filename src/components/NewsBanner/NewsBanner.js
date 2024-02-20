@@ -1,29 +1,26 @@
 import React, { useState, useEffect } from 'react';
 import './style.css';
 import { useTranslation } from 'react-i18next';
+import axios from 'axios';
+import { Link } from 'react-router-dom';
 
-const newsData = [
-  {
-    id: 1,
-    title: 'Purchase of generators for educational institutions',
-    text: 'During the war, the issue of ensuring the functioning of educational institutions is extremely important. That is why gasoline generators were purchased with the funds of the local budget, which were handed over to the directors of educational institutions of the Chernoostriv settlement council. They will serve as a reliable assistant to ensure the operation of school boiler rooms in case of damage or interruption of the electricity supply.',
-    imageUrl: '/news.jpg',
-  },
-  {
-    id: 2,
-    title: 'Breaking News 2',
-    text: 'This is the second breaking news. More important updates!',
-    imageUrl: '/news.jpg',
-  },
-  {
-    id: 3,
-    title: 'Breaking News 3',
-    text: 'This is the second breaking news. More important updates!',
-    imageUrl: '/news.jpg',
-  },
-];
 const NewsBanner = () => {
   const [currentNewsIndex, setCurrentNewsIndex] = useState(0);
+  const [newsData, setNewsData] = useState([]);
+  const { t } = useTranslation();
+
+  useEffect(() => {
+    const fetchData = async () => {
+      try {
+        const response = await axios.get('https://localhost:44369/api/News');
+        setNewsData(response.data);
+      } catch (error) {
+        console.error('Error fetching data:', error);
+      }
+    };
+
+    fetchData();
+  }, []);
 
   useEffect(() => {
     const intervalId = setInterval(() => {
@@ -31,7 +28,7 @@ const NewsBanner = () => {
     }, 5000);
 
     return () => clearInterval(intervalId);
-  }, []);
+  }, [newsData]);
 
   const handlePrevClick = () => {
     setCurrentNewsIndex((prevIndex) => (prevIndex - 1 + newsData.length) % newsData.length);
@@ -41,20 +38,25 @@ const NewsBanner = () => {
     setCurrentNewsIndex((prevIndex) => (prevIndex + 1) % newsData.length);
   };
 
-  const { title, text, imageUrl } = newsData[currentNewsIndex];
-  const { t } = useTranslation();
+  const { name, description, imageName } = newsData[currentNewsIndex] || {}; // Для уникнення помилок при відсутності даних
+
   return (
     <div className="news-banner-container">
       <div className="news-wrapper">
         <div className="news-square-left"></div>
-        <img src={imageUrl} alt={title} className="news-image" />
-        <div className="news-content">
-          <div className="news-text">
-            <h2>{t(title)}</h2>
-            <p>{t(text)}</p>
+        {newsData.length > 0 && (
+          <img src={imageName} alt={name} className="news-image" />
+        )}
+        <Link to="/AllNews" style={{ textDecoration: 'none' }}>
+          <div className="news-content">
+            {newsData.length > 0 && (
+              <div className="news-text">
+                <h2>{t(name)}</h2>
+                <p>{t(description)}</p>
+              </div>
+            )}
           </div>
-        </div>
-        <div className="news-square-right"></div>
+        </Link>
         <button className="news-arrow left" onClick={handlePrevClick}>&lt;</button>
         <button className="news-arrow right" onClick={handleNextClick}>&gt;</button>
       </div>

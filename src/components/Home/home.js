@@ -1,6 +1,7 @@
 import React, { useEffect, useState, useRef } from "react";
 import NewsBanner from '../NewsBanner/NewsBanner';
 import Footer from '../Footer/footer';
+import FutureProgram from '../FutureProject/FutureProgram';
 import './style.css';
 import axios from 'axios';
 import { useTranslation } from 'react-i18next';
@@ -45,9 +46,10 @@ const Home = () => {
                     <div className="circle-with-triangle" onClick={() => window.open('https://drive.google.com/drive/u/0/folders/1_FYtsUlbj40CyRCtfdlOu8gwhIuyAw4Z', '_blank')}></div>
                     <p className="text-caption4">{t('Watch photo and video from event')}</p>
 
-                    <div className="square-container-banner">
+                    <div className="square-container-banner-news">
                         <NewsBanner />
                     </div>
+
                     <div className="container-map">
                         {data.slice(currentIndex, currentIndex + 4).map(item => (
                             <div key={item.id} className="square-white-homeMap">
@@ -57,6 +59,9 @@ const Home = () => {
                                 <button onClick={() => window.location.href = '/Settlements'}>{t('Learn More')}</button>
                             </div>
                         ))}
+                    </div>
+                     <div className="square-container-banner">
+                        <FutureProgram />
                     </div>
                     <div id="aboutUs" ref={aboutUsRef} className="square-container-home">
                         <h2>{t('About us')}</h2>

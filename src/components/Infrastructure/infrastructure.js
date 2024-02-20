@@ -32,8 +32,11 @@ const Infrastructure = () => {
                 </div>
            ))}
         </div>
+        <div className="square-space"></div>
+        <div className="footer-dep">
+            <Footer />
+        </div>
       </div>
-     <Footer />
     </div>
 
   );

@@ -1,16 +1,14 @@
 .authorization-container {
-  max-width: 1440px;
-  max-height: 1000px;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  margin: 0 auto;
   margin-top: 100px;
-  font-size: 14px;
-  margin-left: 500px;
-  border-radius: 8px; /* Закруглені кути */
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Тінь */
-  background: LightCyan;
+  max-width: 800px;
+  background-color: white;
+  border: 1px solid #00b3b3;
+  padding: 20px;
 }
 
 .authorization-container form {
@@ -18,49 +16,87 @@
   flex-direction: column;
   align-items: center;
   padding: 30px;
-  border: 1px solid #ccc;
-  border-radius: 5px;
+  border: 1px solid #00b3b3;
+  border-radius: 50px;
 }
 
-.authorization-container label {
-  font-size: 20px;
-  margin-bottom: 20px;
-  font-weight: 600;
+.authorization-container .input-label {
+  font-size: 16px;
+  font-family: 'Poppins', SemiBold 600 Italic;
+  margin-bottom: 10px;
+  margin-left: -250px;
+  font-weight: bold;
 }
 
-.authorization-container input {
+.authorization-container .input-field {
   padding: 10px;
   margin-bottom: 20px;
-  border: 1px solid #ccc;
-  border-radius: 5px;
-  font-size: 1.2rem;
+  border: 1px solid #00b3b3;
+  border-radius: 50px;
+  font-family: 'Poppins', SemiBold 600 Italic;
+  font-size: 16px;
   width: 100%;
-  max-width: 300px;
+  max-width: 400px;
 }
 
-.authorization-container button {
+.password-input {
+  position: relative;
+}
+
+.password-input .fa-eye-slash {
+  position: absolute;
+  top: 50%;
+  right: 10px;
+  transform: translateY(-50%);
+  cursor: pointer;
+}
+
+.authorization-container .submit-button {
   padding: 15px 25px;
   margin-top: 60px;
-  background-color: #ff6600;
+  background-color: #008080;
   color: white;
   border: none;
-  border-radius: 5px;
+  border-radius: 50px;
   font-size: 1.2rem;
   cursor: pointer;
   transition: all 0.3s ease 0s;
-  align-items: center;
-  text-decoration: none;
 }
-
-.authorization-container button:hover {
-  background-color: #ff6600;
-  box-shadow: 0px 8px 8px #723d00;
+.authorization-container .submit-button:hover {
+  background-color: #008080;
+  box-shadow: 0px 8px 8px #008080;
   transform: translateY(-5px);
 }
 
-.status {
-  font-size: 24px;
-  font-family: 'Poppins', SemiBold 600 Italic;
-  color: #00063a;
-  padding-bottom: 100px;
+.buttom-down{
+  margin-top:15px;
+  background-color: #008080;
+  color: white;
+  border: none;
+  border-radius: 50px;
+  width: 400px;
+  display: flex;
+  justify-content: space-between; /* Розподіл простору між елементами */
+  width: 300px;
+  margin-bottom: 20px;
 }
+
+.login-button, .registration-button {
+  padding: 15px 25px;
+  background-color: #008080;
+  color: white;
+  border: none;
+  border-radius: 50px;
+  font-size: 1.2rem;
+  cursor: pointer;
+  transition: all 0.3s ease 0s;
+  margin-left: 10px;
+
+}
+
+.login-button:hover, .registration-button:hover {
+  background-color: #00b3b3;
+  box-shadow: 0px 8px 8px #00b3b3;
+  transform: translateY(-5px);
+}
+

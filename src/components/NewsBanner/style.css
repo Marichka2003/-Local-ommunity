@@ -30,13 +30,6 @@
   height: 20%;
 }
 
-.news-square-right {
-  top: 245px;
-  right: 395px; /* Змініть значення, щоб змінити положення правого квадрата */
-  background-color: PaleTurquoise; /* Колір правого квадрата */
-  width: 80px; /* Змініть значення, щоб змінити ширину правого квадрата */
-  height: 20%;
-}
 .news-content {
   display: flex;
   align-items: center;
@@ -75,13 +68,20 @@
 
 .news-arrow {
   position: absolute;
-  top: 50%;
+  top: 40%;
   transform: translateY(-50%);
-  font-size: 24px;
+  font-size: 40px;
   background-color: transparent;
   border: none;
   color: MediumTurquoise;
   cursor: pointer;
+  opacity: 0.5;
+  font-weight: bold;
+  transition: color 0.3s ease;
+}
+
+.news-arrow:hover {
+  color: #008080; /* Змініть колір при наведенні */
 }
 
 .news-arrow.left {

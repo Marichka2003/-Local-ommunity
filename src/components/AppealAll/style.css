@@ -53,6 +53,10 @@
   color: white;
   border-radius: 25px;
   cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+.see-previous-btn:hover{
+    background-color: #008080;
 }
 .columns-container {
   display: flex;
