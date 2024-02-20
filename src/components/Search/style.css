@@ -54,15 +54,15 @@
 }
 
 .search-results a {
-  text-decoration: none; /* Відміна декорації посилання */
+  text-decoration: none;
   color: #003366;
-  font-style: italic; /* Курсив */
+  font-style: italic;
 }
 .search-result-item {
   border: 1px solid #008080;
-  border-radius: 5px; /* Закруглені кути */
+  border-radius: 5px;
   padding: 10px;
   margin-bottom: 10px;
-  background-color: #f9f9f9; /* Світлий фон */
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Тінь */
+  background-color: #f9f9f9;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }

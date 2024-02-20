@@ -7,7 +7,7 @@ import { useTranslation } from 'react-i18next';
 
 const AllFuture = () => {
   const [newsData, setNewsData] = useState([]);
-  const [alreadyVoted, setAlreadyVoted] = useState(false); // Додали змінну для позначення того, чи вже проголосував користувач
+  const [alreadyVoted, setAlreadyVoted] = useState(false);
   const { t } = useTranslation();
   useEffect(() => {
     fetchData();
@@ -23,8 +23,7 @@ const AllFuture = () => {
   };
 
   const handleVote = () => {
-    // Опрацьовуйте голосування тут
-    setAlreadyVoted(true); // Позначте, що користувач вже проголосував
+    setAlreadyVoted(true);
   };
 
   return (
@@ -33,13 +32,12 @@ const AllFuture = () => {
           <p>
             {t('Vote for community development')} <br />
           </p>
-          <Link to="/" className="see-previous-btn-news">{t('Previous page')}</Link>
+          <Link to="/" className="see-previous-btn-news">{t('Back')}</Link>
         </div>
         <div className="square-container-allnews">
           {newsData.map(item => (
             <div key={item.id} className="square-white-future">
               <h2>{t(item.name)}</h2>
-
               <div className="voted">
                 <img src={item.imageName} alt={item.name} />
                 <p className="future-votes">{t('Voted')}: <strong>{item.votes}</strong></p>

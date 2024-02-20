@@ -2,10 +2,12 @@ import React, { useState } from 'react';
 import axios from 'axios';
 import './style.css';
 import { Link } from 'react-router-dom';
+import { useTranslation } from 'react-i18next';
 
 const Search = () => {
   const [searchQuery, setSearchQuery] = useState('');
   const [searchResults, setSearchResults] = useState([]);
+  const { t } = useTranslation();
 
   const handleSearchChange = (e) => {
     const query = e.target.value;
@@ -29,22 +31,22 @@ const Search = () => {
   const renderSearchResults = () => {
     return (
       <div className='search-results'>
-  {searchResults.appealResults.length > 0 && (
-    <>
-      <h2>Appeal Results:</h2>
-      <ul>
-        {searchResults.appealResults.map((result, index) => (
-          <li key={index}>
-            <Link to={`/appeal`}>{result.fullName}</Link>
-          </li>
-        ))}
-      </ul>
-    </>
-  )}
+        {searchResults.appealResults.length > 0 && (
+          <>
+            <h2>{t('Appeal Results')}:</h2>
+            <ul>
+              {searchResults.appealResults.map((result, index) => (
+                <li key={index}>
+                  <Link to={`/appeal`}>{result.fullName}</Link>
+                </li>
+              ))}
+            </ul>
+          </>
+        )}
 
-  {searchResults.departmentResults.length > 0 && (
+        {searchResults.departmentResults.length > 0 && (
     <>
-      <h2>Department Results:</h2>
+      <h2>{t('Department Results')}:</h2>
       <ul>
         {searchResults.departmentResults.map((result, index) => (
           <li key={index}>
@@ -57,7 +59,7 @@ const Search = () => {
 
   {searchResults.financeResults.length > 0 && (
     <>
-      <h2>Finance Results:</h2>
+      <h2>{t('Finance Results')}:</h2>
       <ul>
         {searchResults.financeResults.map((result, index) => (
           <li key={index}>{result.socialPrograms}</li>
@@ -65,12 +67,51 @@ const Search = () => {
       </ul>
     </>
   )}
-
-  {searchResults.appealResults.length === 0 && searchResults.departmentResults.length === 0 && searchResults.financeResults.length === 0 && (
-    <p>No result</p>
+  {searchResults.newsResults.length > 0 && (
+    <>
+        <h2>{t('News Results')}:</h2>
+        <ul>
+          {searchResults.newsResults.map((result, index) => (
+            <li key={index}>
+              <Link to={`/allNews`}>{result.name}</Link>
+            </li>
+          ))}
+        </ul>
+    </>
   )}
-</div>
 
+  {searchResults.mapResults.length > 0 && (
+    <>
+        <h2>{t('Map Results')}:</h2>
+        <ul>
+            {searchResults.mapResults.map((result, index) => (
+                <li key={index}>
+                    <Link to={`/settlements`}>{result.name}</Link>
+                </li>
+            ))}
+        </ul>
+    </>
+)}
+
+    {searchResults.infrastructureResults.length > 0 && (
+      <>
+        <h2>{t('Infrastructure Results')}:</h2>
+        <ul>
+          {searchResults.infrastructureResults.map((result, index) => (
+            <li key={index}>
+              <Link to={`/infrastructure`}>{result.name}</Link>
+            </li>
+          ))}
+        </ul>
+      </>
+    )}
+
+        {searchResults.appealResults.length === 0 && searchResults.departmentResults.length === 0
+          && searchResults.financeResults.length === 0 && searchResults.newsResults.length === 0
+          && searchResults.infrastructureResults.length === 0 && searchResults.mapResults.length === 0 && (
+            <p>{t('No result')}</p>
+          )}
+      </div>
     );
   };
 
@@ -78,11 +119,11 @@ const Search = () => {
     <div className='search-container'>
       <input
         type="text"
-        placeholder="Enter your search query..."
+        placeholder={t('Enter your search query...')}
         value={searchQuery}
         onChange={handleSearchChange}
       />
-      <button onClick={handleSearchClick}>Search</button>
+      <button onClick={handleSearchClick}>{t('Search')}</button>
       {Object.keys(searchResults).length > 0 && renderSearchResults()}
     </div>
   );

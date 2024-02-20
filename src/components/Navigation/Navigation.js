@@ -3,15 +3,14 @@ import { Link } from 'react-router-dom';
 
 
 function Navigation() {
-  const [isLoggedIn, setIsLoggedIn] = useState(false); // Припустимо, що це ваш стан для перевірки автентифікації
-  const profilePhotoUrl = '...'; // URL фотографії профілю, яку ви можете отримати під час автентифікації
+  const [isLoggedIn, setIsLoggedIn] = useState(false);
+  const profilePhotoUrl = '...';
 
   return (
     <ul className='navigation-container'>
       {isLoggedIn ? (
         <>
           <li><img src={profilePhotoUrl} alt='Profile' /></li>
-          {/* Додайте інші пункти меню для автентифікованого користувача */}
         </>
       ) : (
         <>

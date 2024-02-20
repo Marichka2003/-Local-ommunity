@@ -29,7 +29,7 @@ const AppealAll = () => {
           <p>
             <br />
           </p>
-          <Link to="/Appeal" className="see-previous-btn">Previous page</Link>
+          <Link to="/Appeal" className="see-previous-btn">{t('Back')}</Link>
         </div>
         <div className="square-space"></div>
         <div className="columns-container">
@@ -44,7 +44,7 @@ const AppealAll = () => {
               <p className="text-appeal"> {t('I')} {t(item.fullName)} {t('living in')} {t(item.adress)} {t('and will ask about')} {t(item.description)}
               </p>
               <p className="appeal-footer">{t('Phone Number')}: 0{item.phoneNumber} <br /></p>
-              <p className="appeal-footer-left">{t('Signature')}: M.Svee</p>
+              <p className="appeal-footer-left">{t('Signature')}: M.Schee</p>
             </div>
           ))}
         </div>

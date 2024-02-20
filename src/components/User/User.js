@@ -13,7 +13,7 @@ const User = ({handleLogout}) => {
     axios.get('https://localhost:44369/api/User/1')
       .then(response => {
         setUserData(response.data);
-        setUpdatedUserData(response.data); // Початкове значення для оновлених даних
+        setUpdatedUserData(response.data);
       })
       .catch(error => {
         console.error('Error fetching user data:', error);
@@ -38,7 +38,7 @@ const User = ({handleLogout}) => {
       .then(response => {
         console.log('User data updated successfully:', response.data);
         setEditing(false);
-        setUserData(updatedUserData); // Оновити дані користувача з оновленими даними
+        setUserData(updatedUserData);
       })
       .catch(error => {
         console.error('Error updating user data:', error);

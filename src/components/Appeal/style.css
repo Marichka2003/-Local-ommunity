@@ -16,8 +16,8 @@
     max-width: 900px;
     height: 420px;
     background: white;
-    border-radius: 8px; /* Закруглені кути */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Тінь */
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 .square-container-appeal {
   position: relative;
@@ -50,8 +50,8 @@
   min-width: 97px;
   max-width: 350px;
   height: 357px;
-  border-radius: 10px; /* Заокруглені кути */
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4); /* Тінь */
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4);
 }
 .square-container p {
     position: relative;
@@ -62,8 +62,8 @@
     padding-right: 20px;
     font-family: 'Poppins', SemiBold 600 Italic;
     color: #003366;
-    box-sizing: border-box; /* Додано властивість box-sizing */
-    word-wrap: break-word; /* Додано властивість word-wrap */
+    box-sizing: border-box;
+    word-wrap: break-word;
 }
 .square-container h2 {
     position: relative;
@@ -75,8 +75,8 @@
     padding-top: 20px;
     font-family: 'Poppins', SemiBold 600 Italic;
     color: #003366;
-    box-sizing: border-box; /* Додано властивість box-sizing */
-    word-wrap: break-word; /* Додано властивість word-wrap */
+    box-sizing: border-box;
+    word-wrap: break-word;
 }
 
 .square-text-appeal{
@@ -88,8 +88,8 @@
     max-width: 400px;
     height: 400px;
     background: white;
-    border-radius: 10px; /* Заокруглені кути */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4); /* Тінь */
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4);
 }
 
 .text-header-appeal{
@@ -158,9 +158,9 @@
   padding: 20px;
   border-radius: 5px;
   z-index: 1;
-  width: 500px; /* Змініть це значення на те, яке вам підходить */
+  width: 500px;
   height: 530px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.6); /* Тінь */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.6);
   background: LightCyan;
 }
 
@@ -177,7 +177,7 @@ form textarea {
   padding: 10px;
   margin-bottom: 10px;
   border: 1px ;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4); /* Тінь */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4);
   border-radius: 4px;
   font-family: 'Poppins', SemiBold 600 Italic;
 }
@@ -217,8 +217,8 @@ form button[type="button"] {
   cursor: pointer;
   position: relative;
   border: none;
-  top: -30px; /* Зсунути вверх */
-  left: -660px;  /* Зсунути вліво */
+  top: -30px;
+  left: -660px;
   transition: background-color 0.3s ease;
 }
 .open-modal-btn:hover{
@@ -239,8 +239,8 @@ form button[type="button"] {
   color: DarkTurquoise;
   font-weight: bold;
   position: relative;
-  top: -60px; /* Зсунути вверх */
-  left: 320px;  /* Зсунути вліво */
+  top: -60px;
+  left: 320px;
 }
 
 .footer-app{

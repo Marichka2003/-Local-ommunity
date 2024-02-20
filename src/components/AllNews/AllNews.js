@@ -27,7 +27,7 @@ const AllNews = () => {
           <p>
             {t('News')} <br />
           </p>
-          <Link to="/" className="see-previous-btn-news">{t('Previous page')}</Link>
+          <Link to="/" className="see-previous-btn-news">{t('Back')}</Link>
         </div>
         <div className="square-container-allnews">
           {newsData.map(item => (

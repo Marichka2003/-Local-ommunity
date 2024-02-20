@@ -1,11 +1,10 @@
 .content-container-map {
-  margin: 0 auto; /* Горизонтальний автоматичний відступ */
-  max-width: 800px; /* Максимальна ширина контейнера */
+  margin: 0 auto;
+  max-width: 800px;
   background-color: white;
-  border: 1px solid #000; /* Додано ободок: 1px товщина, solid тип лінії, #000 чорний колір */
-  padding: 20px; /* Додав відступ всередині контейнера */
+  border: 1px solid #000;
+  padding: 20px;
 }
-
 
 .square-white-map-container {
   padding-top: 40px;
@@ -16,12 +15,12 @@
 }
 
 .square-white-map {
-  width: calc(48% - 6px); /* 20px відступи (10px від лівого та правого margin) */
+  width: calc(48% - 6px);
   background: white;
   border-radius: 10px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4);
-  margin: 10px; /* Збільшити відступи, якщо потрібно */
-  padding: 1px; /* Збільшити відступи, якщо потрібно */
+  margin: 10px;
+  padding: 1px;
 }
 
 .square-chornyi{
@@ -38,17 +37,17 @@
 }
 .square-chornyi p,
  .square-white-map p{
-  margin: 10px 0; /* Відступи зверху та знизу */
-  padding: 0 15px; /* Відступи зліва та справа */
-  line-height: 1.5; /* Міжрядковий інтервал */
+  margin: 10px 0;
+  padding: 0 15px;
+  line-height: 1.5;
   font-family: 'Times New Roman', serif;
   font-size: 16px;
 }
 .square-chornyi h2,
  .square-white-map h2{
-  margin: 10px 0; /* Відступи зверху та знизу */
-  padding: 0 15px; /* Відступи зліва та справа */
-  line-height: 1.5; /* Міжрядковий інтервал */
+  margin: 10px 0;
+  padding: 0 15px;
+  line-height: 1.5;
   font-family: 'Georgia', serif;
   color: #003366;
   font-size: 18px;

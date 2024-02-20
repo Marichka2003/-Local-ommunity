@@ -26,7 +26,7 @@ const { t } = useTranslation();
           <div className="content-container">
               <div className="block-blue">
                 <div className="container-settlement">
-                    <button onClick={() => window.location.href = '/'} className="buttom-set">Back</button>
+                    <button onClick={() => window.location.href = '/'} className="buttom-set">{t('Back')}</button>
                     {data.map(item => (
                         <div key={item.id} className="square-white-settlements">
                             <img src={item.imageName} alt={item.name} />

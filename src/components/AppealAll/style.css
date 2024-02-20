@@ -12,8 +12,8 @@
   max-width: 400px;
   height: 400px;
   background: white;
-  border-radius: 10px; /* Заокруглені кути */
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4); /* Тінь */
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4);
   margin: 10px;
   margin-bottom: 20px;
 }
@@ -36,13 +36,13 @@
     padding-right: 20px;
     font-family: 'Poppins', SemiBold 600 Italic;
     color: #003366;
-    box-sizing: border-box; /* Додано властивість box-sizing */
+    box-sizing: border-box;
     word-wrap: break-word;
 }
 .see-previous-btn {
   position: relative;
-  top: -65px; /* Зсунути вверх */
-  left: 500px;  /* Зсунути вліво */
+  top: -65px;
+  left: 500px;
   padding: 10px 20px;
   font-size: 16px;
   margin-top: 260px;
@@ -62,7 +62,7 @@
   display: flex;
   flex-wrap: wrap;
   justify-content: space-evenly;
-  padding: 10px; /* Додайте відступ для кращого вигляду */
+  padding: 10px;
   overflow: hidden;
   margin-top: 40px;
   max-width: 875px;

@@ -17,16 +17,16 @@
 
 .news-square-left,
 .news-square-right {
-  width: 360px; /* Ширина квадратів */
+  width: 360px;
   height: 5px;
   position: absolute;
 }
 
 .news-square-left {
   top: -10px;
-  left: 55px; /* Змініть значення, щоб змінити положення лівого квадрата */
-  background-color: MediumTurquoise; /* Колір лівого квадрата */
-  width: 80px; /* Змініть значення, щоб змінити ширину лівого квадрата */
+  left: 55px;
+  background-color: MediumTurquoise;
+  width: 80px;
   height: 20%;
 }
 
@@ -52,7 +52,7 @@
   color: #003366;
   flex: 1;
   padding-top: -10px;
-  padding-left: 10px; /* Відступи: вгору, праворуч, внизу, ліворуч */
+  padding-left: 10px;
   z-index: 1;
 }
 .news-text p{
@@ -62,7 +62,7 @@
   color: #003366;
   flex: 1;
   padding-top: -10px;
-  padding-left: 10px; /* Відступи: вгору, праворуч, внизу, ліворуч */
+  padding-left: 10px;
   z-index: 1;
 }
 
@@ -81,7 +81,7 @@
 }
 
 .news-arrow:hover {
-  color: #008080; /* Змініть колір при наведенні */
+  color: #008080;
 }
 
 .news-arrow.left {

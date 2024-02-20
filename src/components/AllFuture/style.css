@@ -25,13 +25,13 @@
 }
 .voted{
   display: flex;
-  align-items: center; /* Вирівнюємо елементи вертикально по центру */
+  align-items: center;
   margin-bottom: 10px;
 }
 .square-white-future img {
-  width: 400px; /* Змініть розмір, якщо потрібно */
-  height: auto; /* Автоматично обчислить висоту для збереження пропорцій */
-  margin-right: 90px; /* Відступ між зображенням і голосуванням */
+  width: 400px;
+  height: auto;
+  margin-right: 90px;
 }
 .vote-buttom-enter{
   display: flex;
